@@ -10,7 +10,7 @@ var travelRouter = require('./app_server/routes/travel');
 var roomsRouter = require('./app_server/routes/rooms');
 var mealsRouter = require('./app_server/routes/meals')
 var newsRouter = require('./app_server/routes/news');
-var aboutRouter =require('./app_server/routes/about');
+var aboutRouter = require('./app_server/routes/about');
 var contactRouter = require('./app_server/routes/contact');
 var handlebars = require('hbs');
 
