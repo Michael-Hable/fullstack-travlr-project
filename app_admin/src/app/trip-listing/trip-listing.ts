@@ -1,9 +1,11 @@
 import { Component, OnInit, } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
-import { trips } from '../data/trips';
 import { TripCard } from '../trip-card/trip-card';
+
 import { Trip } from '../models/trip';
 import { TripData } from '../services/trip-data';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trip-listing',
@@ -17,8 +19,12 @@ export class TripListing implements OnInit{
   trips: Trip[] = [];
   message: string = 'Loading trips...';
 
-  constructor(private tripData: TripData) {
+  constructor(private tripData: TripData, private router: Router) {
     console.log('trip-listing constructor called');
+  }
+
+  public addTrip(): void {
+    this.router.navigate(['add-trip']);
   }
 
   private getStuff(): void {
