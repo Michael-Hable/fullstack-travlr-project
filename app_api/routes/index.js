@@ -1,17 +1,22 @@
 const express = require("express");
-const router =express.Router();
+const router = express.Router();
 
-// This is where we import the controllers we will route
 const tripsController = require("../controllers/trips");
+const authController = require("../controllers/authentication");
 
-// define route for our trips endpoint
+router
+  .route("/register")
+  .post(authController.register);
+
+router
+  .route("/login")
+  .post(authController.login);
+
 router
   .route("/trips")
-  .get(tripsController.tripsList) // GET Method routes tripList
-  .post(tripsController.tripsAddTrip); // POST method adds a trip
+  .get(tripsController.tripsList) 
+  .post(tripsController.tripsAddTrip); 
 
-// GET method routes tripsFindByCode - requires parameter
-// PUT method routes tripsUpdateTrip - requires parameter
 router  
   .route('/trips/:tripCode')
   .get(tripsController.tripsFindByCode)
