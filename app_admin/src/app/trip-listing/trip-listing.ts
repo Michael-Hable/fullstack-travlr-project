@@ -1,6 +1,7 @@
 import { Component, OnInit, } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { TripCard } from '../trip-card/trip-card';
+import { Authentication } from '../services/authentication';
 
 import { Trip } from '../models/trip';
 import { TripData } from '../services/trip-data';
@@ -19,7 +20,11 @@ export class TripListing implements OnInit{
   trips: Trip[] = [];
   message: string = 'Loading trips...';
 
-  constructor(private tripData: TripData, private router: Router) {
+  constructor(
+    private tripData: TripData, 
+    private router: Router,
+    private authentication: Authentication
+  ) {
     console.log('trip-listing constructor called');
   }
 
@@ -44,10 +49,13 @@ export class TripListing implements OnInit{
     })
   }
 
-
   ngOnInit(): void {
       console.log('ngOnInit called');
       this.getStuff();
+  }
+
+    public isLoggedIn() {
+    return this.authentication.isLoggedIn();
   }
 
 }
