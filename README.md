@@ -97,4 +97,3 @@ http://localhost:3000
 ## Credits
 
 Project setup and guidelines based on SNHU’s CS-465 Full Stack Development course materials.
-

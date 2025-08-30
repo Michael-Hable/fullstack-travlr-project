@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Travlr Getaways Website Template</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+  <div id="background">
+  <div id="page">
+    {{> header }}
+    <div id="contents">
+      <div id="adbox">
+        <img src="{{indexData.adbox.image}}" alt="Img">
+        <h1>{{indexData.adbox.title}}</h1>
+        <p>{{{indexData.adbox.content}}}</p>
+      </div>
+      <div id="main">
+        <div class="box">
+          <h3>Latest Blog</h3>
+          <ul>
+            {{#each indexData.latestBlog}}
+              <li>
+                <h4><a href="{{url}}">{{title}}</a></h4>
+                <span>{{date}}</span>
+                <p>{{summary}}</p>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div id="testimonials" class="box">
+          <h3>Testimonials</h3>
+          {{#each indexData.testimonials}}
+            <p>“{{content}}” <span>- <a href="{{url}}">{{author}}</a></span></p>
+          {{/each}}
+        </div>
+      </div>
+      <div id="sidebar">
+        {{#each indexData.sidebar}}
+          <div class="section">
+            <a href="{{url}}"><img src="{{image}}" alt="Img"></a>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{> footer }}
+  </div>
+</body>
+</html>
