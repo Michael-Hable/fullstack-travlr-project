@@ -103,7 +103,7 @@ Project setup and guidelines based on SNHU’s CS-465 Full Stack Development cou
 
 © 2025 Michael Hable. All rights reserved.
 
-This repository contains academic coursework submitted for CS-410.
+This repository contains academic coursework submitted for CS-465.
 It is provided publicly for portfolio and review purposes only.
 No permission is granted to copy, modify, distribute, or use this code
 for any commercial, academic, or software-related purpose.
