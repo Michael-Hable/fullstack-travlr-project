@@ -30,8 +30,8 @@ Before you begin, make sure you have the following installed on your system:
 
 1. **Clone the Repository**
    ```bash
-   git clone git@github.com:Michael-Hable/CS-465-fullstack.git
-   cd CS-465-fullstack
+   git clone https://github.com/Michael-Hable/fullstack-travlr-project.git
+   cd fullstack-travlr-project
    ```
 
 2. **Install Dependencies**
